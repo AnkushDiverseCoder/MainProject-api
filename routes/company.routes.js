@@ -1,6 +1,6 @@
 import express from "express";
 import { AddCompany, DeleteCompany, PutCompany } from "../controller/company/company.crud.controller.js";
-import { CustomerNames, companyId, workPlaceName } from "../controller/company/company.utility.controller.js";
+import { CustomerNames, companyData, companyId, workPlaceName } from "../controller/company/company.utility.controller.js";
 
 const router = express.Router();
 
@@ -11,7 +11,8 @@ router.delete("/delete/:id", DeleteCompany);
 
 // Utility Routes 
 router.get("/getName", CustomerNames);
-router.get("/getWorkPlaceName", workPlaceName);
+router.post("/getWorkPlaceName", workPlaceName);
 router.post("/Id", companyId);
+router.post("/modifyData", companyData);
 
 export default router;

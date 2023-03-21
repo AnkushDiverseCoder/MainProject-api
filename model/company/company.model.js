@@ -31,7 +31,6 @@ const CompanySchema = new mongoose.Schema(
     professionalFees: {
       type: Number,
     },
-    employee: [{ type: mongoose.Schema.Types.ObjectId }],
   },
   {
     timestamps: true,

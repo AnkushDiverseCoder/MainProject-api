@@ -11,6 +11,7 @@ import employeeRoute from "./routes/Employee.Routes.js";
 
 
 const app = express();
+app.use(express.json());
 dotenv.config();
 
 // Db Connection 

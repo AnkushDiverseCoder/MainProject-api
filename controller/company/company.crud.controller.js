@@ -7,7 +7,7 @@ export const AddCompany = async (req, res) => {
         const { companyName , workPlaceName } = req.body;
         const exist = await Company.findOne({ companyName , workPlaceName });
         if(exist){       
-            return res.status(200).json({msg:"Company With Same Name and WorksiteName Exist ",status:false});
+            return res.status(200).json({msg:"Company With Same Name and WorksiteName Exist",status:false});
         }
         const newCompany = new Company(req.body);
         await newCompany.save();
@@ -44,12 +44,9 @@ export const AddCompany = async (req, res) => {
   export const PutCompany = async (req, res) => {
     try {
         const updatedCompany = await Company.findByIdAndUpdate(req.params.id, req.body, { new: true });
-        if (!updatedCompany) {
-          return res.status(404).json({ error: 'Customer not found' });
-        }
-        res.json(updatedCompany);
+        return res.status(200).json({msg:"Company Updated",status:true});
       } catch (error) {
-        res.status(400).json({ error: error.message });
+        return res.status(200).json({msg:error.message,status:false});
       }
   };
   
