@@ -8,8 +8,9 @@ import cors from "cors";
 import authRoute from "./routes/auth.routes.js";
 import companyRoute from "./routes/company.routes.js";
 import employeeRoute from "./routes/Employee.Routes.js";
+import userRoute from "./routes/user.routes.js";
 
-
+// App and Middleware
 const app = express();
 app.use(express.json());
 dotenv.config();
@@ -18,7 +19,7 @@ dotenv.config();
 mongoose.set("strictQuery", true);
 const connect = async () => {
 	try {
-		mongoose.connect(process.env.MONGO);
+		mongoose.connect("mongodb+srv://ankush:gudiya@mainproject.v3tllkr.mongodb.net/?retryWrites=true&w=majority");
 		console.log("Connected to mongoDB!");
 	} catch (error) {
 		console.log(error);
@@ -34,6 +35,7 @@ app.use(cookieParser());
 app.use("/api/auth", authRoute);
 app.use("/api/company", companyRoute);
 app.use("/api/employee", employeeRoute);
+app.use("/api/user", userRoute);
 
 // Error Message
 app.use((err, req, res, next) => {

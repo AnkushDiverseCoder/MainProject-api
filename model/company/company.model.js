@@ -2,32 +2,69 @@ import mongoose, { SchemaType } from "mongoose";
 
 const CompanySchema = new mongoose.Schema(
   {
-    companyCode: String,
-    companyName: String,
-    companyAddress: String,
-    state: String,
-    district: String,
-    authorizedPersonName: String,
-    authorizedContactNumber: String,
-    companyEmailId: String,
-    panNumber: String,
-    gstNumber: String,
-    epfCodeNumber: String,
-    esicCodeNumber: String,
-    professionalTax: String,
-    tanNumber: String,
-    workPlaceName: String,
-    serviceProvide: {
+    companyCode: {
       type: String,
-      enum: ['With Register', 'Without Register'],
+    },
+    companyName: {
+      type: String,
+    },
+    companyAddress: {
+      type: String,
+    },
+    state: {
+      type: String,
+    },
+    district: {
+      type: String,
+    },
+    authorizedPersonName: {
+      type: String,
+    },
+    authorizedContactNumber: {
+      type: String,
+    },
+    companyEmailId: {
+      type: String,
+    },
+    panNumber: {
+      type: String,
+    },
+    gstNumber: {
+      type: String,
+    },
+    epfCodeNumber: {
+      type: String,
+    },
+    esicCodeNumber: {
+      type: String,
+    },
+    professionalTax: {
+      type: String,
+    },
+    tanNumber: {
+      type: String,
+    },
+    workPlaceName: {
+      type: String,
+    },
+    serviceProvide: {
+      type: String
     },
     dateOfCommencement: {
       type: Date,
     },
-    licenceNumber: String,
-    epfRegionalName: String,
-    esicRegionalName: String,
-    natureOfBusiness: String,
+    licenceNumber: {
+      type: String,
+    },
+    epfRegionalName: {
+      type: String,
+    },
+    esicRegionalName: {
+      type: String,
+    },
+    natureOfBusiness: {
+      type: String,
+    },
     professionalFees: {
       type: Number,
     },

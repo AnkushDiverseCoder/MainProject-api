@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { additionalDetails } from "./employee.utility.model.js";
 
 const employeeSchema = new mongoose.Schema(
   {
@@ -22,7 +21,7 @@ const employeeSchema = new mongoose.Schema(
     dateOfBirth: {
       type: Date,
     },
-    gender: {
+    fatherName: {
       type: String,
     },
     maritalStatus: {
@@ -68,7 +67,74 @@ const employeeSchema = new mongoose.Schema(
         },
       },
     ],
-    additionalDetails: additionalDetails,
+    aadharNumber: {
+      type: String,
+    },
+    nameAsPerAadhar: {
+      type: String,
+    },
+    dateOfBirthAsPerAadhar: {
+      type: String,
+    },
+    panNumber: {
+      type: String,
+    },
+    mobileNumber: {
+      type: String,
+    },
+    kycOtherDetails: {
+      type: String,
+    },
+    bankName: {
+      type: String,
+    },
+    bankBranch: {
+      type: String,
+    },
+    accountNumber: {
+      type: Number,
+    },
+    ifscCode: {
+      type: String,
+    },
+
+    rest: {
+      type: String,
+    },
+    calculation: {
+      type: String,
+    },
+    wagesRate: [
+      {
+        heads: {
+          type: String,
+        },
+        rates: {
+          type: Number,
+        },
+        define: {
+          type: String,
+        },
+      },
+    ],
+    epfMemberId: {
+      type: String,
+    },
+    uanNumber: {
+      type: String,
+    },
+    esicIpNumber: {
+      type: String,
+    },
+    bonusApplicable: {
+      type: String,
+    },
+    gratuityApplicable: {
+      type: String,
+    },
+    complianceOtherDetails: {
+      type: String,
+    },
   },
   {
     timestamps: true,
