@@ -1,7 +1,6 @@
 import express from "express";
 import multer from "multer";
-import { uploadCompanyData, uploadEmployeeData } from "../controller/user.controller.js";
-import { Employee } from "../model/employee/employee.model.js";
+import { uploadCompanyData, uploadEmployeeData } from "../controller/user/user.controller.js";
 
 const router = express.Router();
 

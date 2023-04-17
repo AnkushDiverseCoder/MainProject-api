@@ -18,3 +18,13 @@ export const employeeNames = async (req, res) => {
         res.status(201).json({msg:error.message,status:false});
     }
 }
+  
+  //   Get a specific customer by ID
+export const getSingleEmployee = async (req, res) => {
+    try {
+      const employeeData = await Employee.findOne({ _id: req.params._id })
+      return res.status(201).json({ msg: employeeData, status: true });
+    } catch (error) {
+      return res.status(201).json({ msg: error.message, status: false });
+    }
+  };

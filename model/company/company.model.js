@@ -7,6 +7,7 @@ const CompanySchema = new mongoose.Schema(
     },
     companyName: {
       type: String,
+      required: true,
     },
     companyAddress: {
       type: String,
@@ -19,12 +20,15 @@ const CompanySchema = new mongoose.Schema(
     },
     authorizedPersonName: {
       type: String,
+      required: true,
     },
     authorizedContactNumber: {
       type: String,
+      required: true,
     },
     companyEmailId: {
       type: String,
+      required: true,
     },
     panNumber: {
       type: String,
@@ -34,9 +38,11 @@ const CompanySchema = new mongoose.Schema(
     },
     epfCodeNumber: {
       type: String,
+      required: true,
     },
     esicCodeNumber: {
       type: String,
+      required: true,
     },
     professionalTax: {
       type: String,
@@ -46,6 +52,7 @@ const CompanySchema = new mongoose.Schema(
     },
     workPlaceName: {
       type: String,
+      required: true,
     },
     serviceProvide: {
       type: String

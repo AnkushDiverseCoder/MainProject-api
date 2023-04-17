@@ -8,27 +8,30 @@ const employeeSchema = new mongoose.Schema(
     },
     companyName: {
       type: String,
+      required: true,
     },
     workPlaceName: {
       type: String,
+      required: true,
     },
     employeeName: {
       type: String,
+      required: true,
     },
     fatherName: {
       type: String,
+      required: true,
     },
     dateOfBirth: {
       type: Date,
-    },
-    fatherName: {
-      type: String,
+      required: true,
     },
     maritalStatus: {
       type: String,
     },
     dateOfJoining: {
       type: String,
+      required: true,
     },
     designation: {
       type: String,
@@ -44,6 +47,7 @@ const employeeSchema = new mongoose.Schema(
     },
     contactNumber: {
       type: String,
+      required: true,
     },
     email: {
       type: String,
@@ -97,17 +101,20 @@ const employeeSchema = new mongoose.Schema(
     ifscCode: {
       type: String,
     },
-
+    
     rest: {
       type: String,
+      required: true,
     },
     calculation: {
       type: String,
+      required: true,
     },
     wagesRate: [
       {
         heads: {
           type: String,
+          required: true,
         },
         rates: {
           type: Number,
@@ -122,9 +129,11 @@ const employeeSchema = new mongoose.Schema(
     },
     uanNumber: {
       type: String,
+      required: true,
     },
     esicIpNumber: {
       type: String,
+      required: true,
     },
     bonusApplicable: {
       type: String,
